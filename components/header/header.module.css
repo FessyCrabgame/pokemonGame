@@ -1,0 +1,22 @@
+.header {
+  box-shadow: 16px 16px 16px 16px #3a3a3a1a;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  padding: 16px;
+  border-radius: 16px;
+}
+.mainHeaderDiv {
+  display: flex;
+  gap: 12px;
+}
+.span {
+  width: 2px;
+  height: 54px;
+  background-color: #efefef;
+}
+.moneyDiv {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
