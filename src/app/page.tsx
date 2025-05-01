@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="p-4">
       <Header />
-      <div className="flex">
+      <div className="flex mt-5">
         <Inventory />
       </div>
     </div>
