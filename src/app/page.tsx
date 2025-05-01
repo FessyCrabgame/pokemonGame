@@ -1,3 +1,5 @@
+"use client";
+
 import { Provider } from "react-redux";
 import { Header } from "../../components/header/header";
 import { Inventory } from "../../components/inventory/inventory";

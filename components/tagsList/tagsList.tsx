@@ -21,7 +21,7 @@ export const TagsList: React.FC<WrapperProps> = ({
     setDropdownMenu(false);
   };
   return (
-    <div className="w-[296px] border border-[#D9D9D9] p-1 rounded relative bg-white">
+    <div className="w-full border border-[#D9D9D9] p-1 rounded relative bg-white">
       <div
         onClick={() => setDropdownMenu(!dropDownMenu)}
         className="cursor-pointer flex flex-wrap gap-1 min-h-[32px] items-center"

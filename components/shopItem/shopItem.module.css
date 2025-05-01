@@ -1,18 +1,29 @@
 .shopItem {
   padding: 12px;
   border-radius: 16px;
+  box-shadow: 16px 16px 16px 16px #3a3a3a1a;
 }
 .imageDiv {
   display: flex;
   gap: 23px;
 }
 .name {
-  font-size: bold;
+  font-weight: 700;
 }
 .button {
-  background-image: #365fac;
+  background-color: #365fac;
   width: 100%;
   color: white;
   border-radius: 2px;
   padding: 4px 15px;
+  height: 32px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+.button:hover {
+  opacity: 0.8;
+}
+.image {
+  min-width: 59px;
+  min-height: 59px;
 }

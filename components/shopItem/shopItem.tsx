@@ -1,35 +1,24 @@
 import Image from "next/image";
 import css from "./shopItem.module.css";
+import { WrapperProps } from "./types";
 
-interface WrapperProps {
-  image: string;
-  name: string;
-  desciption: string;
-  weight: number;
-  chance: number;
-  size: number;
-  cost: number;
-}
-
-export const TagsList: React.FC<WrapperProps> = ({
-  image,
-  name,
-  desciption,
-  ///weight,
-  ///chance,
-  ///size,
-  cost,
-}) => {
+export const ShopItem: React.FC<WrapperProps> = ({ item }) => {
   return (
-    <div className={css.shopItem}>
+    <div onClick={() => {}} className={css.shopItem}>
       <div className={css.imageDiv}>
-        <Image src={`/images/${image}`} width={59} height={59} alt={"Image"} />
+        <Image
+          src={`/images/${item.image}`}
+          width={59}
+          height={59}
+          alt={"Image"}
+          className={css.image}
+        />
         <div>
-          <p className={css.name}>{name}</p>
-          <p>{desciption}</p>
+          <p className={css.name}>{item.name}</p>
+          <p>{item.description}</p>
         </div>
       </div>
-      <button className={css.button}>Купить за {cost}</button>
+      <button className={css.button}>Купить за {item.cost}</button>
     </div>
   );
 };
