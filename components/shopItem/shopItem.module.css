@@ -1,0 +1,18 @@
+.shopItem {
+  padding: 12px;
+  border-radius: 16px;
+}
+.imageDiv {
+  display: flex;
+  gap: 23px;
+}
+.name {
+  font-size: bold;
+}
+.button {
+  background-image: #365fac;
+  width: 100%;
+  color: white;
+  border-radius: 2px;
+  padding: 4px 15px;
+}
