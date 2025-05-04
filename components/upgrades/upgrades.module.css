@@ -1,0 +1,48 @@
+.container {
+  padding-left: 1.5rem;
+}
+
+.title {
+  font-weight: bold;
+  margin-top: 0.75rem;
+}
+
+.upgradeRow {
+  display: flex;
+  gap: 94px;
+  margin-top: 0.75rem;
+}
+
+.button {
+  background-color: #365fac;
+  width: 78px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.button:hover {
+  background-color: #365fac99;
+}
+
+.price {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.coin {
+  min-width: 32px;
+  max-width: 32px;
+  min-height: 32px;
+  max-height: 32px;
+}
+
+.growthStats {
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 164px;
+}

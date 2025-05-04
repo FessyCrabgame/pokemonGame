@@ -1,7 +1,10 @@
+import { useSelector } from "react-redux";
 import css from "./header.module.css";
 import Image from "next/image";
+import { RootState } from "@/app/store/store";
 
 export const Header = () => {
+  const money = useSelector((state: RootState) => state.money.value);
   return (
     <header className={css.header}>
       <div className={css.mainHeaderDiv}>
@@ -26,7 +29,7 @@ export const Header = () => {
           src={"/images/image 2 (1).png"}
           alt={"Coin"}
         />
-        <p>1000</p>
+        <p>{money}</p>
       </div>
     </header>
   );

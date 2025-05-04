@@ -1,8 +1,14 @@
 import Image from "next/image";
 import css from "./shopItem.module.css";
 import { WrapperProps } from "./types";
+import { addingElement } from "@/app/store/slices/inventorySlice";
+import { decrementByAmount } from "@/app/store/slices/moneySlice";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/app/store/store";
 
 export const ShopItem: React.FC<WrapperProps> = ({ item }) => {
+  const money = useSelector((state: RootState) => state.money.value);
+  const dispatch = useDispatch();
   return (
     <div onClick={() => {}} className={css.shopItem}>
       <div className={css.imageDiv}>
@@ -18,7 +24,17 @@ export const ShopItem: React.FC<WrapperProps> = ({ item }) => {
           <p>{item.description}</p>
         </div>
       </div>
-      <button className={css.button}>Купить за {item.cost}</button>
+      <button
+        onClick={() => {
+          if (money > item.cost) {
+            dispatch(addingElement(item));
+            dispatch(decrementByAmount(item.cost));
+          }
+        }}
+        className={css.button}
+      >
+        Купить за {item.cost}
+      </button>
     </div>
   );
 };

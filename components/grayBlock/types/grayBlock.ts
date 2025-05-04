@@ -1,5 +1,3 @@
-export type GrayBlockProps = {
-  image: string | null;
-  width: number;
-  height: number;
-};
+export interface GrayBlockProps {
+  white?: boolean;
+}

@@ -1,0 +1,22 @@
+.name {
+  display: flex;
+  justify-content: space-between;
+}
+.pokemonItem {
+  width: 165px;
+}
+.mainInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.addInfo {
+  text-align: end;
+}
+.pokemonItem {
+  box-shadow: 16px 16px 16px 16px #3a3a3a1a;
+  padding: 12px;
+  border-radius: 16px;
+}
+.bold {
+  font-weight: 700;
+}

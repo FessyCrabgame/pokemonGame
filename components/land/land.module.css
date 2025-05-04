@@ -1,24 +1,15 @@
-.inventory {
-  box-shadow: 16px 16px 16px 16px #3a3a3a1a;
-  padding: 16px;
-  border-radius: 16px;
-}
-
 .grayBlocks {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  width: 288px;
+  width: 408px;
   position: absolute;
   z-index: 2;
 }
 
 .imagesDiv {
   z-index: 5;
-  width: 288px;
-}
-.inventoryP {
-  margin-bottom: 16px;
+  width: 408px;
 }
 .grayBlock {
   background-color: #efefef;

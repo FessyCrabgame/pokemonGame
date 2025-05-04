@@ -5,7 +5,7 @@ interface MoneyState {
 }
 
 const initialState: MoneyState = {
-  value: 0,
+  value: 10000,
 };
 
 const moneySlice = createSlice({

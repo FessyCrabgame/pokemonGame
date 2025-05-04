@@ -24,7 +24,7 @@ export const Option: React.FC<WrapperProps> = ({
       )}
     >
       <div className="flex justify-between w-full">
-        <p className="">{wrapperName}</p>
+        <p>{wrapperName}</p>
         <ChevronDown
           className="cursor-pointer"
           onClick={() => setOpen(!open)}

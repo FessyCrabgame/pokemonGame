@@ -1,0 +1,21 @@
+.grayBlocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 288px;
+  position: absolute;
+  z-index: 2;
+}
+
+.imagesDiv {
+  z-index: 5;
+  width: 288px;
+}
+.grayBlock {
+  background-color: #efefef;
+  border-radius: 4px;
+  z-index: 2;
+}
+.containersGrayDiv {
+  position: relative;
+}

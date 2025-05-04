@@ -3,4 +3,13 @@
   min-height: 48px;
   min-width: 48px;
   border-radius: 4px;
+  z-index: 2;
+}
+.whiteBlock {
+  background-color: #efefef;
+  min-height: 48px;
+  min-width: 48px;
+  border-radius: 4px;
+  z-index: 2;
+  opacity: 0.3;
 }
