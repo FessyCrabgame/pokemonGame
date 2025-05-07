@@ -11,12 +11,18 @@ export const Shop = () => {
 
   return (
     <div className={css.shop}>
-      <p>Shop</p>
+      <p className={css.shopP}>Shop</p>
       <TagsList selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
       <div className={css.shopItems}>
-        {shopItems.map((shopI, index) => (
-          <ShopItem item={shopI} key={index}></ShopItem>
-        ))}
+        {shopItems
+          .filter((shopI) =>
+            selectedTags.length === 0
+              ? true
+              : selectedTags.some((tag) => shopI.name.includes(tag))
+          )
+          .map((shopI, index) => (
+            <ShopItem item={shopI} key={index} />
+          ))}
       </div>
     </div>
   );

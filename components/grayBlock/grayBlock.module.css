@@ -4,6 +4,7 @@
   min-width: 48px;
   border-radius: 4px;
   z-index: 2;
+  position: relative;
 }
 .whiteBlock {
   background-color: #efefef;
@@ -12,4 +13,7 @@
   border-radius: 4px;
   z-index: 2;
   opacity: 0.3;
+}
+.allowDrop {
+  border: 2px dashed green;
 }

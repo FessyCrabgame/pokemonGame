@@ -10,6 +10,7 @@
 .imagesDiv {
   z-index: 5;
   width: 408px;
+  position: relative;
 }
 .grayBlock {
   background-color: #efefef;

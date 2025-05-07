@@ -5,7 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import styles from "./Upgrades.module.css";
 import { UpgradesProps } from "./upgradesTypes";
 
-export const Upgrades: React.FC<UpgradesProps> = ({ temp, setTemp }) => {
+export const Upgrades: React.FC<UpgradesProps> = ({
+  temp,
+  setTemp,
+  lockedBlocks,
+  setLockedBlocks,
+}) => {
   const money = useSelector((state: RootState) => state.money.value);
   const dispatch = useDispatch();
 
@@ -23,7 +28,9 @@ export const Upgrades: React.FC<UpgradesProps> = ({ temp, setTemp }) => {
       <p className={styles.title}>Увеличить площадь грядки</p>
       <div className={styles.upgradeRow}>
         <button
-          onClick={() => handlePurchase(10, () => console.log(1))}
+          onClick={() =>
+            handlePurchase(10, () => setLockedBlocks(lockedBlocks.slice(1)))
+          }
           className={styles.button}
         >
           Купить

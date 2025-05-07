@@ -1,0 +1,127 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.logoBlock {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.separator {
+  display: inline-block;
+  width: 2px;
+  height: 54px;
+  background-color: #efefef;
+}
+
+.card {
+  padding: 24px;
+  box-shadow: 16px 16px 16px 16px rgba(58, 58, 58, 0.05);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 400px;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  margin: 12px 0;
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.active {
+  color: #365fac;
+}
+
+.lineContainer {
+  display: flex;
+  width: 100%;
+}
+
+.line {
+  height: 1px;
+  background-color: #efefef;
+}
+
+.lineContainer span:nth-child(1) {
+  width: 111px;
+}
+.lineContainer span:nth-child(2) {
+  width: 54px;
+}
+.lineContainer span:nth-child(3) {
+  width: 31px;
+}
+.lineContainer span:nth-child(4) {
+  width: 47px;
+}
+.lineContainer span:nth-child(5) {
+  width: 105px;
+}
+
+.lineActive {
+  background-color: #365fac;
+  height: 1px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.label {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.required {
+  color: #ff4d4f;
+  text-align: end;
+}
+
+.input {
+  border-radius: 6px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+}
+
+.error {
+  color: #ff4d4f;
+  margin: 16px 0;
+}
+
+.button {
+  width: 100%;
+  background-color: #365fac;
+  border-radius: 6px;
+  padding: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #2a4f9f;
+}
+
+.marginBottom {
+  margin-bottom: 32px;
+}

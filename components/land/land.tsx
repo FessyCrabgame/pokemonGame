@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { decreasingTime } from "@/app/store/slices/gardenSlice";
 import { LandProps } from "./landTypes";
 
-export const Land: React.FC<LandProps> = ({ temp }) => {
+export const Land: React.FC<LandProps> = ({ temp, lockedBlocks }) => {
   const garden = useSelector((state: RootState) => state.garden.value);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -32,8 +32,8 @@ export const Land: React.FC<LandProps> = ({ temp }) => {
             <div
               className="absolute"
               style={{
-                top: `${253 + (el.id ? Math.floor(el.id / 7) : 0) * 60}px`,
-                left: `${374 + (el.id ? el.id % 7 : 0) * 60}px`,
+                top: `${3 + (el.id ? Math.floor(el.id / 7) : 0) * 60}px`,
+                left: `${4 + (el.id ? el.id % 7 : 0) * 60}px`,
               }}
               key={index}
             >
@@ -72,12 +72,7 @@ export const Land: React.FC<LandProps> = ({ temp }) => {
             length: 49,
           },
           (_, index) => (
-            <GrayBlock
-              white={
-                index % 7 === 5 || index % 7 === 6 || Math.floor(index / 7) >= 5
-              }
-              key={index}
-            />
+            <GrayBlock white={lockedBlocks.includes(index)} key={index} />
           )
         )}
       </div>

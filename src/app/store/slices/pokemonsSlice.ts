@@ -47,9 +47,19 @@ const pokemonSlice = createSlice({
           : el
       );
     },
+    increasingEarnedMoney: (state) => {
+      state.value = state.value.map((el) => {
+        return { ...el, moneySum: el.moneySum + el.money };
+      });
+    },
   },
 });
 
-export const { addingPokemon, deletingPokemon, renamePokemon, increaseWeight } =
-  pokemonSlice.actions;
+export const {
+  addingPokemon,
+  deletingPokemon,
+  renamePokemon,
+  increaseWeight,
+  increasingEarnedMoney,
+} = pokemonSlice.actions;
 export default pokemonSlice.reducer;

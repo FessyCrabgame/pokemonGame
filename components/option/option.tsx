@@ -3,6 +3,7 @@
 import clsx from "clsx";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import css from "./option.module.css";
 
 interface WrapperProps {
   wrapperName: string;
@@ -17,18 +18,10 @@ export const Option: React.FC<WrapperProps> = ({
 }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div
-      className={clsx(
-        "bg-white min-w-full rounded-2xl p-4 flex flex-col shadow-[16px_16px_16px_16px_rgba(58,58,58,0.05)]",
-        className
-      )}
-    >
-      <div className="flex justify-between w-full">
-        <p>{wrapperName}</p>
-        <ChevronDown
-          className="cursor-pointer"
-          onClick={() => setOpen(!open)}
-        />
+    <div className={clsx(css.wrapper, className)}>
+      <div className={css.header}>
+        <p className={css.name}>{wrapperName}</p>
+        <ChevronDown className={css.icon} onClick={() => setOpen(!open)} />
       </div>
       {open && children}
     </div>

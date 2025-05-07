@@ -10,7 +10,7 @@ export const ShopItem: React.FC<WrapperProps> = ({ item }) => {
   const money = useSelector((state: RootState) => state.money.value);
   const dispatch = useDispatch();
   return (
-    <div onClick={() => {}} className={css.shopItem}>
+    <div className={css.shopItem}>
       <div className={css.imageDiv}>
         <Image
           src={`/images/${item.image}`}

@@ -2,6 +2,7 @@
   box-shadow: 16px 16px 16px 16px #3a3a3a1a;
   padding: 16px;
   border-radius: 16px;
+  height: 655px;
 }
 
 .grayBlocks {
@@ -19,7 +20,18 @@
 }
 .inventoryP {
   margin-bottom: 16px;
+  color: #ffcc01;
+  font-weight: 700;
+  font-size: 24px;
+  text-shadow: -2px -2px 0 #365fac, -2px -1px 0 #365fac, -2px 0px 0 #365fac,
+    -2px 1px 0 #365fac, -2px 2px 0 #365fac, -1px -2px 0 #365fac,
+    -1px -1px 0 #365fac, -1px 0px 0 #365fac, -1px 1px 0 #365fac,
+    -1px 2px 0 #365fac, 0px -2px 0 #365fac, 0px -1px 0 #365fac,
+    0px 1px 0 #365fac, 0px 2px 0 #365fac, 1px -2px 0 #365fac, 1px -1px 0 #365fac,
+    1px 0px 0 #365fac, 1px 1px 0 #365fac, 1px 2px 0 #365fac, 2px -2px 0 #365fac,
+    2px -1px 0 #365fac, 2px 0px 0 #365fac, 2px 1px 0 #365fac, 2px 2px 0 #365fac;
 }
+
 .grayBlock {
   background-color: #efefef;
   border-radius: 4px;
@@ -27,4 +39,27 @@
 }
 .containersGrayDiv {
   position: relative;
+}
+.draggable {
+  cursor: move;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+  z-index: 5;
+}
+
+.draggable:active {
+  opacity: 1;
+}
+.allowDrop {
+  cursor: pointer; /* Курсор меняется на разрешённый */
+  border: 2px dashed green; /* Пунктир для ячеек, куда можно сбросить */
+}
+
+/* Стиль для перетаскиваемых изображений */
+.draggable {
+  cursor: grab;
+}
+
+.draggable:active {
+  cursor: grabbing;
 }
