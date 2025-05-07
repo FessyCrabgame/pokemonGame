@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./Upgrades.module.css";
 import { UpgradesProps } from "./upgradesTypes";
+import { useCallback } from "react";
 
 export const Upgrades: React.FC<UpgradesProps> = ({
   temp,
@@ -14,14 +15,17 @@ export const Upgrades: React.FC<UpgradesProps> = ({
   const money = useSelector((state: RootState) => state.money.value);
   const dispatch = useDispatch();
 
-  const handlePurchase = (price: number, callback: () => void) => {
-    if (money >= price) {
-      dispatch(decrementByAmount(price));
-      callback();
-    } else {
-      console.log("Мало денег");
-    }
-  };
+  const handlePurchase = useCallback(
+    (price: number, callback: () => void) => {
+      if (money >= price) {
+        dispatch(decrementByAmount(price));
+        callback();
+      } else {
+        console.log("Мало денег");
+      }
+    },
+    [money, dispatch]
+  );
 
   return (
     <div className={styles.container}>

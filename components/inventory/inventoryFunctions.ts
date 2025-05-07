@@ -3,7 +3,7 @@ import {
   deletingElement,
 } from "@/app/store/slices/inventorySlice";
 import { ItemProps } from "@/app/store/slices/types";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { useDispatch } from "react-redux";
 
 export const findNeededId = (item: ItemProps, locked: number[]): number => {
@@ -98,9 +98,9 @@ export const useInventoryDragAndDrop = (
     [inventory]
   );
 
-  const handleDragStart = (e: React.DragEvent, item: ItemProps) => {
+  const handleDragStart = useCallback((e: React.DragEvent, item: ItemProps) => {
     setDraggedItem(item);
-  };
+  }, []);
 
   const handleDragOver = (e: React.DragEvent, targetId: number) => {
     e.preventDefault();
